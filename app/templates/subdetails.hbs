@@ -1,0 +1,17 @@
+<div id='cssmenu'>
+<ul>
+	{{#each n in model}}
+        {{#if n.taxons}}
+        <li class="has-sub"><a href='#'><span>{{n.name}}</a>
+        	<ul>
+        		{{#each s in n.taxons}}
+			    	<li><a href="#">{{s.name}}</a></li>
+			    {{/each}}
+        	</ul>
+        	</li>
+        {{else}}
+        <li><a href='#'><span>{{n.name}}</a></li>
+    	{{/if}}
+    {{/each}}
+</ul>
+</div>

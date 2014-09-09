@@ -1,0 +1,11 @@
+<div style="">
+<ul class="nav nav-tabs" role="tablist">
+	{{#each catg in controller}}
+		<li>{{#link-to 'subdetails' this.catg.id}}{{catg.root.name}}{{/link-to}}</li>
+	{{/each}}
+  
+</ul>
+</div>
+<br/>
+<br/>
+{{outlet 'hello'}}
